@@ -6,7 +6,7 @@ import downArrow from '../../assets/down-arrow.gif';
 
 <section class="section-homeView">
   <div class="title">
-		<h1 class="text-center text-7xl font-bold">Discover <span class="text-gradient">Ruby Oz</span></h1>
+		<h1 class="leading-title text-center text-7xl font-bold">Discover <span class="text-gradient">Ruby Oz</span></h1>
     <!-- <h1 class="text-center text-7xl font-bold">Discover <span class="text-gradient">Astro</span></h1> -->
     <h3 class="text-center text-2xl font-medium mt-6 text-text-default">Frontend Developer in Taipei, Taiwan</h3>
     <div class="down-arrow">
@@ -14,6 +14,16 @@ import downArrow from '../../assets/down-arrow.gif';
     </div>
   </div>
 </section>
+<script> 
+	import gsap from "gsap"; 
+	document.addEventListener('DOMContentLoaded', function () {
+    gsap.fromTo(
+      ".leading-title",
+			{ opacity: 0, scale: 0.75}, 
+    	{ opacity: 1, scale: 1, duration: 1.5, delay: 3 } 
+    );
+  });
+</script>
 
 <style>
   .text-gradient {

@@ -1,0 +1,60 @@
+---
+---
+
+<section>
+  <div class="section-entryView">
+    <p class="text-5xl entry-title text-text-light">RUBY OZ</p>
+  </div>
+</section>
+<script>
+  import { gsap } from 'gsap';
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const element = document.querySelector('.entry-title') as HTMLElement; ;
+
+    if (element) {
+      const text = element.textContent;
+      if(text){
+        element.innerHTML = text.split("").map(char => `<span>${char}</span>`).join("");
+      }
+
+      const titleSpans = document.querySelectorAll('.entry-title span');
+      const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+      gsap.fromTo(element, { opacity: 0 }, { opacity: 1, duration: 3, ease: 'power4.out', scale: 1.25 });
+
+      titleSpans.forEach((span, i) => {
+        const originalText = span.textContent;
+
+
+        let interval = setInterval(() => {
+          span.textContent = chars.charAt(Math.floor(Math.random() * chars.length));
+        }, 100); 
+
+        setTimeout(() => {
+          clearInterval(interval);
+          span.textContent = originalText;
+        }, 600 + i * 100); 
+      });
+    }
+  });
+</script>
+
+
+
+
+
+<style scoped>
+  .section-entryView {
+    width: 70vw;
+    height: 100vh;
+
+
+    .entry-title {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+</style>
