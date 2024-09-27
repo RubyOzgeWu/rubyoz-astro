@@ -15,6 +15,7 @@
     "@astrojs/vue": "^4.5.1",
     "@vueuse/core": "^11.1.0",
     "astro": "^4.15.8",
+    "gsap": "^3.12.5",
     "sharp": "^0.33.5",
     "typescript": "^5.6.2",
     "vue": "^3.5.8"

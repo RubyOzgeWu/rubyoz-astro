@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 
 import SectionHomeView from '../components/section/homeView.astro';
-import SectionIntroduceView from '../components/section/introduceView.astro';
+import SectionIntroduceView from '../components/section/introduceView.vue';
 import SectionStackView from '../components/section/stackView.astro';
 import SectionProjectsView from '../components/section/projectsView.vue';
 
@@ -11,10 +11,12 @@ import SectionProjectsView from '../components/section/projectsView.vue';
 
 <Layout title="RubyOz">
 	<main>
-		<SectionHomeView />
-		<SectionIntroduceView />
-		<SectionStackView />
-		<SectionProjectsView client:load />
+		<div class="main-layout">
+			<SectionHomeView />
+			<SectionIntroduceView client:load />
+			<SectionStackView />
+			<SectionProjectsView client:load />
+		</div>
 	</main>
 </Layout>
 
