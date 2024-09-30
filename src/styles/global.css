@@ -18,3 +18,18 @@
   --color-text__dark: #111827;
   --color-text__white: #fff;
 }
+
+
+.foldit-light{
+  font-family: "Foldit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.teko-medium {
+  font-family: "Teko", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}

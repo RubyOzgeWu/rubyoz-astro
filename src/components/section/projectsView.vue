@@ -129,7 +129,7 @@ export default defineComponent({
       .project-card {
         width: 100%;
         height: 130px;
-        background: var(--color-text__dark);
+        background: #1f2937;
         border-radius: 0.5rem;
 
         .project-intro {

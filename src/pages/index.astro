@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 
 import SectionEntryView from '../components/section/entryView.astro';
-import SectionHomeView from '../components/section/homeView.astro';
+import SectionHomeView from '../components/section/homeView.vue';
 import SectionIntroduceView from '../components/section/introduceView.vue';
 import SectionStackView from '../components/section/stackView.astro';
 import SectionProjectsView from '../components/section/projectsView.vue';
@@ -16,7 +16,7 @@ import SectionProjectsView from '../components/section/projectsView.vue';
 			<SectionEntryView />
 		</div>
 		<div class="main-layout hidden">
-			<SectionHomeView />
+			<SectionHomeView client:load/>
 			<SectionIntroduceView client:load />
 			<SectionStackView />
 			<SectionProjectsView client:load />
@@ -36,13 +36,24 @@ import { gsap } from 'gsap';
 			gsap.to(entryTitle, {
         scale: 100, 
 				opacity: 0, 
-        duration: 2, 
+        duration: 1.5, 
 				delay: 0.5,
 				ease: 'power3.inOut',
 				onComplete: () => {
-                entryLayout.classList.add('hidden'); 
-                mainLayout.classList.remove('hidden'); 
-            }
+						entryLayout.classList.add('hidden'); 
+						mainLayout.classList.remove('hidden'); 
+
+						gsap.fromTo(
+							".leading-title",
+							{ opacity: 0, scale: 0.2}, 
+							{ opacity: 1, scale: 1, duration: 1, ease: "power4.out" } 
+						);
+						gsap.fromTo(
+							".leading-description",
+							{ opacity: 0, }, 
+							{ opacity: 1,  duration: 1, delay: 0.5, ease: "power4.out" } 
+						);
+        }
       });
 		}, 1500)
 

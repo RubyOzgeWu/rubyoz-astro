@@ -5,5 +5,10 @@
     "strict": true,
     "skipLibCheck": true, 
     "noImplicitAny": false, 
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true
   }
 }
