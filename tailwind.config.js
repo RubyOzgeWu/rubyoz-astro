@@ -4,30 +4,53 @@ export default {
   theme: {
     extend: {},
     colors: {
-      // 主色
       primary: {
-        light: "#3b82f6",
-        default: "#2563eb",
-        dark: "#1e40af",
+        DEFAULT: 'var(--color-primary-90)',
+        100: 'var(--color-primary-100)',
+        90: 'var(--color-primary-90)',
+        80: 'var(--color-primary-80)',
+        70: 'var(--color-primary-70)',
+        60: 'var(--color-primary-60)',
+        50: 'var(--color-primary-50)',
+        40: 'var(--color-primary-40)',
+        30: 'var(--color-primary-30)',
+        20: 'var(--color-primary-20)',
+        10: 'var(--color-primary-10)'
       },
-      // 次要色
       secondary: {
-        light: "#818cf8",
-        default: "#4f46e5",
-        dark: "#3730a3",
+        DEFAULT: 'var(--color-secondary-90)',
+        100: 'var(--color-secondary-100)',
+        90: 'var(--color-secondary-90)',
+        80: 'var(--color-secondary-80)',
+        70: 'var(--color-secondary-70)',
+        60: 'var(--color-secondary-60)',
+        50: 'var(--color-secondary-50)',
+        40: 'var(--color-secondary-40)',
+        30: 'var(--color-secondary-30)',
+        20: 'var(--color-secondary-20)',
+        10: 'var(--color-secondary-10)'
       },
-      // 跳色（
-      accent: {
-        light: "#ffb36b",
-        default: "#fb923c",
-        dark: "#c85a0b",
+      black: {
+        10: 'var(--color-black-10)',
+        20: 'var(--color-black-20)',
+        30: 'var(--color-black-30)',
+        40: 'var(--color-black-40)',
+        50: 'var(--color-black-50)',
+        60: 'var(--color-black-60)',
+        70: 'var(--color-black-70)',
+        80: 'var(--color-black-80)',
+        90: 'var(--color-black-90)',
       },
-      // 文字颜色
-      text: {
-        light: "#d1d5db",
-        default: "#6b7280",
-        dark: "#111827",
-        white: "#ffffff",
+      white: {
+        10: 'var(--color-white-10)',
+        20: 'var(--color-white-20)',
+        30: 'var(--color-white-30)',
+        40: 'var(--color-white-40)',
+        50: 'var(--color-white-50)',
+        60: 'var(--color-white-60)',
+        70: 'var(--color-white-70)',
+        80: 'var(--color-white-80)',
+        90: 'var(--color-white-90)',
       },
     },
   },

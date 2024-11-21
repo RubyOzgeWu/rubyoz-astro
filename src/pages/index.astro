@@ -1,70 +1,10 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-
-import SectionEntryView from '../components/section/entryView.astro';
-import SectionHomeView from '../components/section/homeView.vue';
-import SectionIntroduceView from '../components/section/introduceView.vue';
-import SectionStackView from '../components/section/stackView.astro';
-import SectionProjectsView from '../components/section/projectsView.vue';
-
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Ruby Oz">
-	<main>
-		<div class="entry-layout">
-			<SectionEntryView />
-		</div>
-		<div class="main-layout hidden">
-			<SectionHomeView client:load/>
-			<SectionIntroduceView client:load />
-			<SectionStackView />
-			<SectionProjectsView client:load />
-		</div>
-	</main>
+  <main>
+    <!-- <EntryView /> -->
+    <p style="color: #2c3e50">hello world</p>
+  </main>
 </Layout>
-
-<script>
-
-import { gsap } from 'gsap';
-	const entryTitle	 = document.querySelector('.entry-title') as HTMLElement; 
-	const entryLayout = document.querySelector('.entry-layout') as HTMLElement; 
-	const mainLayout = document.querySelector('.main-layout') as HTMLElement; 
-
-	document.addEventListener('DOMContentLoaded', function() {
-		setTimeout(() => {
-			gsap.to(entryTitle, {
-        scale: 100, 
-				opacity: 0, 
-        duration: 1.5, 
-				delay: 0.5,
-				ease: 'power3.inOut',
-				onComplete: () => {
-						entryLayout.classList.add('hidden'); 
-						mainLayout.classList.remove('hidden'); 
-
-						gsap.fromTo(
-							".leading-title",
-							{ opacity: 0, scale: 0.2}, 
-							{ opacity: 1, scale: 1, duration: 1, ease: "power4.out" } 
-						);
-						gsap.fromTo(
-							".leading-description",
-							{ opacity: 0, }, 
-							{ opacity: 1,  duration: 1, delay: 0.5, ease: "power4.out" } 
-						);
-        }
-      });
-		}, 1500)
-
-
-	})
-</script>
-
-<style scoped>
-	.hidden{
-		display: none;
-	}
-
-
-</style>
